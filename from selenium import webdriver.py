@@ -5,5 +5,7 @@
 #driver = webdriver.Chrome()
 
 from selenium import webdriver
-driver = webdriver.Chrome(executable_path="C:\\chromedriver.exe")
-driver.get("https://www.google.pl/index.html")
+driver = webdriver.Safari()
+driver.get('https://demo.borland.com/testsite/download_testpage.php')
+my_element = driver.find_element_by_id('downloadButton')
+my_element.click()
