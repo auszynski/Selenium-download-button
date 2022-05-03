@@ -1,10 +1,11 @@
-#DOWNLOAD BUTTON TEST
+
 #import os
 #from selenium import webdriver
 
 #os.environ['PATH'] += r"/Users/Artur/Downloads/chromedriver"
 #driver = webdriver.Chrome()
 import time
+from pkg_resources import find_distributions
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -15,7 +16,8 @@ from selenium.webdriver.support import expected_conditions as EC
 driver = webdriver.Safari()
 driver.get('https://jqueryui.com/resources/demos/progressbar/download.html') #adres strony, ktora chcemy uruchomic
 driver.implicitly_wait(30) #time.sleep(30)- w wypadku opoznien serwera
-my_element = driver.find_element_by_id('downloadButton') #wybranie elementu po id podczas "inspekcji" strony
+my_element = driver.find_element_by_id('downloadButton')
+#my_element = driver.find_element(By.ID,'downloadButton') #to samo co wyzej
 time.sleep(3) #zatrzymanie testu na 3s aby zobaczyc jak uruchamia sie element download
 my_element.click() #czynnosc jaka ma wykonac test w zwiazku z wybranym elementem
 
