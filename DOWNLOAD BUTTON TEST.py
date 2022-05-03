@@ -27,4 +27,4 @@ WebDriverWait(driver, 30).until(
         (By.CLASS_NAME, 'progress-label') ,
         'Complete!' #oczekiwany tekst
     )
-)   #linie 24-28 pozwalaja na usuniecie lini 21-22. program bedzie dalej dzialal
+)   #linie 25-29 pozwalaja na usuniecie lini 22-23. program bedzie dalej dzialal
