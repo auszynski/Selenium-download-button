@@ -13,11 +13,11 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 
-driver = webdriver.Safari()
+driver = webdriver.Chrome()
 driver.get('https://jqueryui.com/resources/demos/progressbar/download.html') #adres strony, ktora chcemy uruchomic
 driver.implicitly_wait(30) #time.sleep(30)- w wypadku opoznien serwera
-my_element = driver.find_element_by_id('downloadButton')
-#my_element = driver.find_element(By.ID,'downloadButton') #to samo co wyzej
+#my_element = driver.find_element_by_id('downloadButton')
+my_element = driver.find_element(By.ID,'downloadButton') #to samo co wyzej
 time.sleep(3) #zatrzymanie testu na 3s aby zobaczyc jak uruchamia sie element download
 my_element.click() #czynnosc jaka ma wykonac test w zwiazku z wybranym elementem
 
